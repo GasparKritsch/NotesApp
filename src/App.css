@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.headerContainer{
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.headerContainer h2{
+  padding: 20px 0;
+  font-weight: 500;
+}
+
+.headerContainer .searchBarContainer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 8px;
+  background-color: #ededed;
+}
+
+.headerContainer .searchBarContainer input{
+  background-color: #ededed;
+  border: none;
+  width: 100%;
+}
+
+.headerContainer .searchBarContainer input::placeholder{
+  font-size: 15px;
+}
+
+.headerContainer .searchBarContainer input:focus{
+  outline: none;
+}
+
+
+.headerContainer .searchBarContainer .searchIcon{
+  font-size: 25px;
+  margin: 10px;
+}
+
+.notesListContainer{
+  width: 100%;
+  display: grid;
+  gap: 15px;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  justify-items: center;
+}
+
+.notesListContainer .note{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  align-items: center;
+  background-color: rgb(255, 255, 112);
+  border-radius: 8px;
+}
+
+.note .noteBody{
+  height: 80%;
+  width: 100%;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.note .noteFooter{
+  display: flex;
+  width: 100%;
+  height: 20%;
+  align-items: center;
+}
+
+.note .noteFooter p{
+  margin: 0 auto 0 15px;
+  font-size: 15px;
+}
+
+.note .noteFooter .deleteNoteIcon{
+  margin: 0 15px 0 auto;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.addNote{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  align-items: center;
+  background-color: rgb(120, 216, 253);
+  border-radius: 8px;
+}
+
+.addNote .addNoteText{
+  background-color: transparent;
+  border: 0px;
+  height: 80%;
+  width: 100%;
+}
+
+.addNote textarea{
+  padding: 15px;
+}
+
+textarea{
+  resize: none;
+  border: none;
+  background-color: rgb(120, 216, 253);
+  font-size: 15px;
+}
+
+textarea::placeholder{
+  font-size: 15px;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+.addNote .addNoteFooter{
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.addNote .addNoteFooter .chars{
+  margin: 0 auto 0 10px;
+  font-size: 15px;
+}
+
+.addNote .addNoteFooter button{
+  margin: 0 10px 0 auto;
+  background-color: rgba(237, 237, 237, 0.7);
+  padding: 5px;
+  width: 60px;
+  border-radius: 12px;
+  border: transparent;
+  cursor: pointer;
 }
